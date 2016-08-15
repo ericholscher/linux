@@ -179,12 +179,6 @@ except ImportError:
 
 html_static_path = ['sphinx-static']
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',
-    ],
-}
-
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
@@ -419,3 +413,11 @@ pdf_documents = [
 # line arguments.
 kerneldoc_bin = '../scripts/kernel-doc'
 kerneldoc_srctree = '..'
+
+
+def setup(app):
+    """
+    This is a basic Sphinx extension that adds our CSS overrides.
+    """
+    app.add_stylesheet('theme_overrides.css')
+    
