@@ -419,5 +419,5 @@ def setup(app):
     """
     This is a basic Sphinx extension that adds our CSS overrides.
     """
-    app.add_stylesheet('_static/theme_overrides.css')
+    app.add_stylesheet('theme_overrides.css')
     
